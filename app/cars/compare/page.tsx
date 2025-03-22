@@ -254,8 +254,8 @@ export default function CompareModelsPage() {
 
               <div className="grid grid-cols-3">
                 <div className="p-4 border-t border-primary/10">Giá Khởi Điểm</div>
-                <div className="p-4 border-t border-l border-primary/10 font-bold text-primary">{carsData[car1].price.toLocaleString()} USD</div>
-                <div className="p-4 border-t border-l border-primary/10 font-bold text-primary">{carsData[car2].price.toLocaleString()} USD</div>
+                <div className="p-4 border-t border-l border-primary/10 font-bold text-primary">{carsData[car1].price.toLocaleString('vi-VN')} VND</div>
+                <div className="p-4 border-t border-l border-primary/10 font-bold text-primary">{carsData[car2].price.toLocaleString('vi-VN')} VND</div>
               </div>
 
               {Object.keys(carsData[car1].specs).map((spec) => (
@@ -290,12 +290,12 @@ export default function CompareModelsPage() {
                 <div className="p-4"></div>
                 <div className="p-4 border-t border-l border-primary/10">
                   <Button className="w-full bg-primary hover:bg-primary/90" asChild>
-                    <Link href={`/new-cars/${car1}`}>Xem Chi Tiết</Link>
+                    <Link href={`/cars/${car1}`}>Xem Chi Tiết</Link>
                   </Button>
                 </div>
                 <div className="p-4 border-t border-l border-primary/10">
                   <Button className="w-full bg-primary hover:bg-primary/90" asChild>
-                    <Link href={`/new-cars/${car2}`}>Xem Chi Tiết</Link>
+                    <Link href={`/cars/${car2}`}>Xem Chi Tiết</Link>
                   </Button>
                 </div>
               </div>

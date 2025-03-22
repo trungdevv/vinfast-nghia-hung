@@ -52,18 +52,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/new-cars" className="text-slate-300 hover:text-white">
-                  Xe Mới
+                <Link href="/cars" className="text-slate-300 hover:text-white">
+                  Ô Tô
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="text-slate-300 hover:text-white">
                   Dịch Vụ
-                </Link>
-              </li>
-              <li>
-                <Link href="/promotions" className="text-slate-300 hover:text-white">
-                  Khuyến Mãi
                 </Link>
               </li>
               <li>
@@ -74,42 +69,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Models */}
-          {/* <div>
-            <h3 className="text-lg font-bold mb-4">Các Dòng Xe VinFast</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/new-cars/vf-3" className="text-slate-300 hover:text-white">
-                  VF 3
-                </Link>
-              </li>
-              <li>
-                <Link href="/new-cars/vf-5" className="text-slate-300 hover:text-white">
-                  VF 5
-                </Link>
-              </li>
-              <li>
-                <Link href="/new-cars/vf-6" className="text-slate-300 hover:text-white">
-                  VF 6
-                </Link>
-              </li>
-              <li>
-                <Link href="/new-cars/vf-7" className="text-slate-300 hover:text-white">
-                  VF 7
-                </Link>
-              </li>
-              <li>
-                <Link href="/new-cars/vf-8" className="text-slate-300 hover:text-white">
-                  VF 8
-                </Link>
-              </li>
-              <li>
-                <Link href="/new-cars/vf-9" className="text-slate-300 hover:text-white">
-                  VF 9
-                </Link>
-              </li>
-            </ul>
-          </div> */}
 
           {/* Contact Info */}
           <div>
@@ -122,7 +81,7 @@ export default function Footer() {
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-primary" />
                 <Link href="tel:+84949429556" className="text-slate-300 hover:text-white">
-                  0949.429.556
+                  0949 429 556
                 </Link>
               </li>
               {/* <li className="flex items-center">
@@ -136,7 +95,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-slate-400">
-          <p>© {new Date().getFullYear()} Đại Lý Ủy Quyền VinFast Nam Định. Bảo lưu mọi quyền.</p>
+          <p>© {new Date().getFullYear()} Đại Lý Ủy Quyền VinFast Nam Định. All rights reserved. © Copyright 2025</p>
         </div>
       </div>
     </footer>

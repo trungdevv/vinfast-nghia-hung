@@ -17,7 +17,7 @@ export default function CarSearchForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // In a real app, this would construct a query string and navigate to the search results
-    router.push("/new-cars")
+    router.push("/cars")
   }
 
   return (
@@ -87,7 +87,7 @@ export default function CarSearchForm() {
               <label htmlFor="price-range" className="text-sm font-medium">
                 Price Range
               </label>
-              <span className="text-sm">${priceRange[0].toLocaleString()} - $100,000</span>
+              <span className="text-sm">${priceRange[0].toLocaleString('vi-VN')} - $100,000</span>
             </div>
             <Slider id="price-range" defaultValue={[0]} max={100000} step={5000} onValueChange={setPriceRange} />
           </div>
