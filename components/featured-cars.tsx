@@ -40,7 +40,7 @@ const featuredCars = [
     name: "VF 6",
     type: "B-SUV",
     price: 689000000,
-    image: "/images/vehicles/vf6-exterior-1.jpg",
+    image: "/images/vehicles/vf6-1.jpg",
     features: ["Quãng đường lên tới: 480 km", "Số chỗ ngồi: 5 chỗ"],
   },
   {
