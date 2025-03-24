@@ -518,8 +518,9 @@ const carsData: Record<string, Car> = {
     ],
   },
 }
-export default function CarDetailPage({ params }: { params: { id: any } }) {
-  const car = carsData[params.id as keyof typeof carsData]
+export default async function CarDetailPage({params}: {params: Promise<{ id: string }>}) {
+  const { id } = await params;
+  const car = carsData[id as keyof typeof carsData]
 
   if (!car) {
     notFound()
