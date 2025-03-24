@@ -58,7 +58,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Compare Section */}
-      <section className="py-12 px-4 bg-gradient-to-br from-primary/5 to-primary/10">
+      {/* <section className="py-12 px-4 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4 text-primary">So Sánh Các Dòng Xe VinFast</h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto text-foreground/80">
@@ -68,7 +68,7 @@ export default function HomePage() {
             <Link href="/cars/compare">So Sánh Các Mẫu Xe</Link>
           </Button>
         </div>
-      </section>
+      </section> */}
       {/* Featured Cars */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
