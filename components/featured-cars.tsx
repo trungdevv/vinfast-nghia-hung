@@ -84,16 +84,16 @@ const featuredCars = [
     price: 668000000,
     image: "/images/vehicles/nerio.webp",
     badge: "Dịch Vụ",
-    features: ["Quãng đường lên tới: 385 km", "Số chỗ ngồi: 7 chỗ", "Phù hợp đưa đón VIP"],
+    features: ["Quãng đường lên tới: 320 km", "Số chỗ ngồi: 5 chỗ", "Phù hợp dịch vụ taxi"],
   },
   {
     id: "limo-green",
     name: "Limo Green",
     type: "Dòng Xe Dịch Vụ",
-    price: 299000000,
+    price: 749000000,
     image: "/images/vehicles/limo.webp",
     badge: "Dịch Vụ",
-    features: ["Quãng đường lên tới: 295 km", "Số chỗ ngồi: 5 chỗ", "Phù hợp dịch vụ taxi"],
+    features: ["Quãng đường lên tới: 450 km", "Số chỗ ngồi: 7 chỗ", "Phù hợp đưa đón VIP"],
   }
 ]
 

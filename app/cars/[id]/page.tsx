@@ -147,7 +147,7 @@ const carsData: Record<string, Car> = {
     price: 689000000,
     images: [
       "/images/vehicles/vf6-1.jpg",
-      "/images/vehicles/vf6-2.webp",
+      "/images/vehicles/vf6-2.webp", 
       "/images/vehicles/vf6-3.webp",
       "/images/vehicles/vf6-4.webp",
     ],
@@ -436,7 +436,7 @@ const carsData: Record<string, Car> = {
     ],
     colors: ["Trắng", "Đen", "Bạc", "Xanh đậm"],
     description:
-      "Nerio Green là mẫu xe điện 7 chỗ cao cấp dành cho dịch vụ vận chuyển hành khách VIP. Với không gian nội thất rộng rãi, trang bị tiện nghi đẳng cấp và hệ thống tính năng thông minh, Nerio Green mang đến trải nghiệm di chuyển sang trọng và tiện nghi cho hành khách.",
+      "Nerio Green là mẫu xe điện được thiết kế đặc biệt cho dịch vụ taxi và đi chung. Với thiết kế hiện đại, không gian nội thất tối ưu và chi phí vận hành thấp, Nerio Green mang đến giải pháp di chuyển thông minh, tiện lợi và thân thiện với môi trường cho dịch vụ vận chuyển hành khách. ",
     specs: {
       performance: {
         "Động cơ": "Động cơ điện 150 kW",
@@ -463,7 +463,7 @@ const carsData: Record<string, Car> = {
     },
     features: [
       "Quãng đường lên tới: 385 km",
-      "Số chỗ ngồi: 7 chỗ",
+      "Số chỗ ngồi: 5 chỗ",
       "Công suất: 150 kW",
       "Mô-men xoắn: 350 Nm",
       "Phù hợp cho dịch vụ đưa đón VIP",
@@ -474,7 +474,7 @@ const carsData: Record<string, Car> = {
     id: "limo-green",
     name: "Limo Green",
     type: "Dòng Xe Dịch Vụ",
-    price: 299000000,
+    price: 749000000,
     images: [
       "/images/vehicles/limo.webp",
       "/images/vehicles/limo-2.webp",
@@ -483,7 +483,7 @@ const carsData: Record<string, Car> = {
     ],
     colors: ["Trắng", "Đen", "Bạc", "Xanh"],
     description:
-      "Limo Green là mẫu xe điện được thiết kế đặc biệt cho dịch vụ taxi và đi chung. Với thiết kế hiện đại, không gian nội thất tối ưu và chi phí vận hành thấp, Limo Green mang đến giải pháp di chuyển thông minh, tiện lợi và thân thiện với môi trường cho dịch vụ vận chuyển hành khách.",
+      "Limo Green là mẫu xe điện 7 chỗ cao cấp dành cho dịch vụ vận chuyển hành khách VIP. Với không gian nội thất rộng rãi, trang bị tiện nghi đẳng cấp và hệ thống tính năng thông minh, Nerio Green mang đến trải nghiệm di chuyển sang trọng và tiện nghi cho hành khách.",
     specs: {
       performance: {
         "Động cơ": "Động cơ điện 90 kW",
@@ -510,7 +510,7 @@ const carsData: Record<string, Car> = {
     },
     features: [
       "Quãng đường lên tới: 295 km",
-      "Số chỗ ngồi: 5 chỗ",
+      "Số chỗ ngồi: 7 chỗ",
       "Công suất: 90 kW",
       "Mô-men xoắn: 200 Nm",
       "Phù hợp cho dịch vụ taxi, ride-sharing",
@@ -518,9 +518,8 @@ const carsData: Record<string, Car> = {
     ],
   },
 }
-export default async function CarDetailPage({params}: {params: Promise<{ id: string }>}) {
-  const { id } = await params;
-  const car = carsData[id as keyof typeof carsData]
+export default function CarDetailPage({ params }: { params: { id: any } }) {
+  const car = carsData[params.id as keyof typeof carsData]
 
   if (!car) {
     notFound()
@@ -665,7 +664,7 @@ export default async function CarDetailPage({params}: {params: Promise<{ id: str
           <h2 className="text-3xl font-bold mb-8 text-center">Thông số kỹ thuật</h2>
 
           <Tabs defaultValue="performance" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 gap-4">
+              <TabsList className="grid w-full grid-cols-3 gap-4">
               <TabsTrigger className="bg-primary backdrop-blur-sm border-white hover:bg-primary/70 text-white" value="performance">Hiệu suất</TabsTrigger>
               <TabsTrigger className="bg-primary backdrop-blur-sm border-white hover:bg-primary/70 text-white" value="dimensions">Kích thước</TabsTrigger>
               <TabsTrigger className="bg-primary backdrop-blur-sm border-white hover:bg-primary/70 text-white" value="features">Tính năng</TabsTrigger>

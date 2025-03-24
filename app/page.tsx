@@ -219,7 +219,7 @@ export default function HomePage() {
               <CardContent className="pt-6">
                 <h3 className="text-xl font-bold text-primary">Limo Green</h3>
                 <p className="text-foreground/70 font-bold">Dòng Xe Dịch Vụ</p>
-                <p className="font-bold text-lg mt-2 text-primary">Từ 299.000.000 VND</p>
+                <p className="font-bold text-lg mt-2 text-primary">Từ 749.000.000 VND</p>
                 <ul className="mt-4 space-y-1">
                   <li className="text-sm flex items-center text-foreground/80 font-bold">Quãng đường lên tới: 295 km</li>
                   <li className="text-sm flex items-center text-foreground/80 font-bold">Số chỗ ngồi: 5 chỗ</li>
