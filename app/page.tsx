@@ -24,7 +24,7 @@ export default function HomePage() {
         </div>
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white p-4 bg-black/40">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
-            Đại Lý Ủy Quyền VinFast Nam Định
+             VinFast Nam Định
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl text-white/90 drop-shadow">
             Trải nghiệm tương lai của di chuyển cùng thương hiệu ô tô hàng đầu Việt Nam

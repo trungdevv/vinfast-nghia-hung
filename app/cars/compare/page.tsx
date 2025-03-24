@@ -5,7 +5,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Check, X } from "lucide-react"
 
 interface CarSpecs {
   "Động Cơ": string
@@ -30,22 +29,22 @@ interface Car {
   specs: CarSpecs
 }
 
-// Sample data - in a real app, this would come from an API or database
+// Dữ liệu cập nhật - các thông số được giả định theo thông tin chuẩn cho xe VinFast
 const carsData: Record<string, Car> = {
   "vf-3": {
     id: "vf-3",
     name: "VF 3",
-    type: "SUV Điện Cỡ Nhỏ",
-    price: 20000,
-    image: "/images/vf6.svg",
+    type: "Xe điện thành phố",
+    price: 650000000,
+    image: "/images/vf3.svg",
     specs: {
-      "Động Cơ": "Động cơ điện 150 mã lực",
-      "Pin": "Pin Lithium-ion 30 kWh",
-      "Phạm Vi": "201 km",
-      "Tăng Tốc": "0-100 km/h trong 8.5 giây",
-      "Tốc Độ Tối Đa": "140 km/h",
+      "Động Cơ": "Động cơ điện 100 mã lực",
+      "Pin": "Pin Lithium-ion 35 kWh",
+      "Phạm Vi": "230 km",
+      "Tăng Tốc": "0-100 km/h trong 9.2 giây",
+      "Tốc Độ Tối Đa": "130 km/h",
       "Số Chỗ Ngồi": "4 chỗ",
-      "Khoang Hành Lý": "285 lít",
+      "Khoang Hành Lý": "300 lít",
       "Sạc Nhanh": "Có",
       "AWD": "Không",
       "Cửa Sổ Trời": "Không",
@@ -54,15 +53,15 @@ const carsData: Record<string, Car> = {
   "vf-5": {
     id: "vf-5",
     name: "VF 5",
-    type: "SUV Điện Cỡ Nhỏ",
-    price: 30000,
-    image: "/images/vf6.svg",
+    type: "SUV điện nhỏ",
+    price: 850000000,
+    image: "/images/vf5.svg",
     specs: {
-      "Động Cơ": "Động cơ điện 134 mã lực",
-      "Pin": "Pin Lithium-ion 42 kWh",
-      "Phạm Vi": "310 km",
-      "Tăng Tốc": "0-100 km/h trong 8.0 giây",
-      "Tốc Độ Tối Đa": "150 km/h",
+      "Động Cơ": "Động cơ điện 130 mã lực",
+      "Pin": "Pin Lithium-ion 45 kWh",
+      "Phạm Vi": "270 km",
+      "Tăng Tốc": "0-100 km/h trong 8.5 giây",
+      "Tốc Độ Tối Đa": "140 km/h",
       "Số Chỗ Ngồi": "5 chỗ",
       "Khoang Hành Lý": "350 lít",
       "Sạc Nhanh": "Có",
@@ -73,17 +72,17 @@ const carsData: Record<string, Car> = {
   "vf-6": {
     id: "vf-6",
     name: "VF 6",
-    type: "SUV Điện Cỡ Vừa",
-    price: 35000,
+    type: "SUV điện vừa",
+    price: 1150000000,
     image: "/images/vf6.svg",
     specs: {
-      "Động Cơ": "Động cơ điện 201 mã lực",
-      "Pin": "Pin Lithium-ion 59.6 kWh",
-      "Phạm Vi": "381 km",
-      "Tăng Tốc": "0-100 km/h trong 6.8 giây",
-      "Tốc Độ Tối Đa": "160 km/h",
+      "Động Cơ": "Động cơ điện 180 mã lực",
+      "Pin": "Pin Lithium-ion 60 kWh",
+      "Phạm Vi": "320 km",
+      "Tăng Tốc": "0-100 km/h trong 7.2 giây",
+      "Tốc Độ Tối Đa": "150 km/h",
       "Số Chỗ Ngồi": "5 chỗ",
-      "Khoang Hành Lý": "475 lít",
+      "Khoang Hành Lý": "400 lít",
       "Sạc Nhanh": "Có",
       "AWD": "Tùy chọn",
       "Cửa Sổ Trời": "Tùy chọn",
@@ -92,17 +91,17 @@ const carsData: Record<string, Car> = {
   "vf-7": {
     id: "vf-7",
     name: "VF 7",
-    type: "SUV Điện Thể Thao",
-    price: 42000,
+    type: "SUV điện thể thao",
+    price: 1550000000,
     image: "/images/vf7.svg",
     specs: {
-      "Động Cơ": "Động cơ điện 349 mã lực",
-      "Pin": "Pin Lithium-ion 75.3 kWh",
-      "Phạm Vi": "400 km",
-      "Tăng Tốc": "0-100 km/h trong 5.8 giây",
-      "Tốc Độ Tối Đa": "180 km/h",
+      "Động Cơ": "Động cơ điện 280 mã lực",
+      "Pin": "Pin Lithium-ion 70 kWh",
+      "Phạm Vi": "350 km",
+      "Tăng Tốc": "0-100 km/h trong 6.0 giây",
+      "Tốc Độ Tối Đa": "165 km/h",
       "Số Chỗ Ngồi": "5 chỗ",
-      "Khoang Hành Lý": "550 lít",
+      "Khoang Hành Lý": "450 lít",
       "Sạc Nhanh": "Có",
       "AWD": "Có",
       "Cửa Sổ Trời": "Có",
@@ -111,17 +110,17 @@ const carsData: Record<string, Car> = {
   "vf-8": {
     id: "vf-8",
     name: "VF 8",
-    type: "SUV Điện",
-    price: 49000,
+    type: "SUV điện cao cấp",
+    price: 1800000000,
     image: "/images/vf8.svg",
     specs: {
-      "Động Cơ": "2 động cơ điện AWD, 402 mã lực",
-      "Pin": "Pin Lithium-ion 87.7 kWh",
-      "Phạm Vi": "420 km",
+      "Động Cơ": "2 động cơ điện AWD, 360 mã lực",
+      "Pin": "Pin Lithium-ion 85 kWh",
+      "Phạm Vi": "380 km",
       "Tăng Tốc": "0-100 km/h trong 5.5 giây",
-      "Tốc Độ Tối Đa": "200 km/h",
+      "Tốc Độ Tối Đa": "175 km/h",
       "Số Chỗ Ngồi": "5 chỗ",
-      "Khoang Hành Lý": "720 lít",
+      "Khoang Hành Lý": "500 lít",
       "Sạc Nhanh": "Có",
       "AWD": "Có",
       "Cửa Sổ Trời": "Có",
@@ -130,17 +129,17 @@ const carsData: Record<string, Car> = {
   "vf-9": {
     id: "vf-9",
     name: "VF 9",
-    type: "SUV Điện Hạng Sang",
-    price: 65000,
+    type: "SUV điện hạng sang",
+    price: 2500000000,
     image: "/images/vf9.svg",
     specs: {
-      "Động Cơ": "2 động cơ điện AWD, 402 mã lực",
-      "Pin": "Pin Lithium-ion 92 kWh",
-      "Phạm Vi": "438 km",
-      "Tăng Tốc": "0-100 km/h trong 6.3 giây",
-      "Tốc Độ Tối Đa": "200 km/h",
+      "Động Cơ": "2 động cơ điện AWD, 400 mã lực",
+      "Pin": "Pin Lithium-ion 95 kWh",
+      "Phạm Vi": "420 km",
+      "Tăng Tốc": "0-100 km/h trong 6.0 giây",
+      "Tốc Độ Tối Đa": "190 km/h",
       "Số Chỗ Ngồi": "7 chỗ",
-      "Khoang Hành Lý": "900 lít",
+      "Khoang Hành Lý": "700 lít",
       "Sạc Nhanh": "Có",
       "AWD": "Có",
       "Cửa Sổ Trời": "Có",
@@ -222,7 +221,7 @@ export default function CompareModelsPage() {
                 <div className="p-4 font-bold text-center text-primary">{carsData[car2].name}</div>
               </div>
 
-              <div className="grid grid-cols-3">
+              {/* <div className="grid grid-cols-3">
                 <div className="p-4 border-t border-primary/10">Hình Ảnh</div>
                 <div className="p-4 border-t border-l border-primary/10 flex justify-center">
                   <div className="relative h-40 w-60">
@@ -244,7 +243,7 @@ export default function CompareModelsPage() {
                     />
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="grid grid-cols-3">
                 <div className="p-4 border-t border-primary/10">Loại Xe</div>
@@ -254,34 +253,22 @@ export default function CompareModelsPage() {
 
               <div className="grid grid-cols-3">
                 <div className="p-4 border-t border-primary/10">Giá Khởi Điểm</div>
-                <div className="p-4 border-t border-l border-primary/10 font-bold text-primary">{carsData[car1].price.toLocaleString('vi-VN')} VND</div>
-                <div className="p-4 border-t border-l border-primary/10 font-bold text-primary">{carsData[car2].price.toLocaleString('vi-VN')} VND</div>
+                <div className="p-4 border-t border-l border-primary/10 font-bold text-primary">
+                  {carsData[car1].price.toLocaleString("vi-VN")} VND
+                </div>
+                <div className="p-4 border-t border-l border-primary/10 font-bold text-primary">
+                  {carsData[car2].price.toLocaleString("vi-VN")} VND
+                </div>
               </div>
 
               {Object.keys(carsData[car1].specs).map((spec) => (
                 <div key={spec} className="grid grid-cols-3">
                   <div className="p-4 border-t border-primary/10">{spec}</div>
                   <div className="p-4 border-t border-l border-primary/10">
-                    {typeof carsData[car1].specs[spec] === "boolean" ? (
-                      carsData[car1].specs[spec] ? (
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
-                      ) : (
-                        <X className="h-5 w-5 text-red-500 mx-auto" />
-                      )
-                    ) : (
-                      carsData[car1].specs[spec]
-                    )}
+                    {carsData[car1].specs[spec]}
                   </div>
                   <div className="p-4 border-t border-l border-primary/10">
-                    {typeof carsData[car2].specs[spec] === "boolean" ? (
-                      carsData[car2].specs[spec] ? (
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
-                      ) : (
-                        <X className="h-5 w-5 text-red-500 mx-auto" />
-                      )
-                    ) : (
-                      carsData[car2].specs[spec]
-                    )}
+                    {carsData[car2].specs[spec]}
                   </div>
                 </div>
               ))}
@@ -319,4 +306,3 @@ export default function CompareModelsPage() {
     </main>
   )
 }
-

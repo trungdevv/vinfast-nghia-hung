@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
 import FeaturedCars from "@/components/featured-cars"
 import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsContent } from "@/components/ui/tabs"
 
 export default function CarsPage() {
   return (

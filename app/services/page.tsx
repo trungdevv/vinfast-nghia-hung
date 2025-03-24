@@ -1,54 +1,54 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { CalendarIcon, Clock, PenToolIcon as Tool, Shield, Car, Wrench, Zap, Truck, Headphones } from "lucide-react"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { CalendarIcon, Clock, PenToolIcon as Tool, Headphones } from "lucide-react"
 
 // Sample data - in a real app, this would come from an API or database
-const services = [
-  {
-    id: "maintenance",
-    title: "Bảo Dưỡng Định Kỳ",
-    description: "Dịch vụ bảo dưỡng thường xuyên để giữ xe VinFast của bạn ở tình trạng tối ưu.",
-    icon: Tool,
-    image: "/images/vf8.svg",
-  },
-  {
-    id: "repair",
-    title: "Dịch Vụ Sửa Chữa",
-    description: "Dịch vụ sửa chữa chuyên nghiệp cho tất cả các mẫu VinFast sử dụng phụ tùng và phụ kiện chính hãng.",
-    icon: Wrench,
-    image: "/images/vf7.svg",
-  },
-  {
-    id: "warranty",
-    title: "Dịch Vụ Bảo Hành",
-    description: "Bảo hành toàn diện và lựa chọn bảo hành mở rộng để bạn an tâm.",
-    icon: Shield,
-    image: "/images/vf6.svg",
-  },
-  {
-    id: "charging",
-    title: "Giải Pháp Sạc Xe Điện",
-    description: "Lắp đặt trạm sạc tại nhà và truy cập mạng lưới sạc công cộng cho xe điện.",
-    icon: Zap,
-    image: "/images/vf9.svg",
-  },
-  {
-    id: "parts",
-    title: "Phụ Tùng & Phụ Kiện Chính Hãng",
-    description: "Phụ tùng và phụ kiện VinFast chính hãng để duy trì hiệu suất và giá trị của xe bạn.",
-    icon: Car,
-    image: "/images/vf8.svg",
-  },
-  {
-    id: "roadside",
-    title: "Hỗ Trợ Đường Bộ",
-    description: "Hỗ trợ đường bộ khẩn cấp 24/7 cho chủ xe VinFast ở bất kỳ đâu trên cả nước.",
-    icon: Truck,
-    image: "/images/vf7.svg",
-  },
-]
+// const services = [
+//   {
+//     id: "maintenance",
+//     title: "Bảo Dưỡng Định Kỳ",
+//     description: "Dịch vụ bảo dưỡng thường xuyên để giữ xe VinFast của bạn ở tình trạng tối ưu.",
+//     icon: Tool,
+//     image: "/images/vf8.svg",
+//   },
+//   {
+//     id: "repair",
+//     title: "Dịch Vụ Sửa Chữa",
+//     description: "Dịch vụ sửa chữa chuyên nghiệp cho tất cả các mẫu VinFast sử dụng phụ tùng và phụ kiện chính hãng.",
+//     icon: Wrench,
+//     image: "/images/vf7.svg",
+//   },
+//   {
+//     id: "warranty",
+//     title: "Dịch Vụ Bảo Hành",
+//     description: "Bảo hành toàn diện và lựa chọn bảo hành mở rộng để bạn an tâm.",
+//     icon: Shield,
+//     image: "/images/vf6.svg",
+//   },
+//   {
+//     id: "charging",
+//     title: "Giải Pháp Sạc Xe Điện",
+//     description: "Lắp đặt trạm sạc tại nhà và truy cập mạng lưới sạc công cộng cho xe điện.",
+//     icon: Zap,
+//     image: "/images/vf9.svg",
+//   },
+//   {
+//     id: "parts",
+//     title: "Phụ Tùng & Phụ Kiện Chính Hãng",
+//     description: "Phụ tùng và phụ kiện VinFast chính hãng để duy trì hiệu suất và giá trị của xe bạn.",
+//     icon: Car,
+//     image: "/images/vf8.svg",
+//   },
+//   {
+//     id: "roadside",
+//     title: "Hỗ Trợ Đường Bộ",
+//     description: "Hỗ trợ đường bộ khẩn cấp 24/7 cho chủ xe VinFast ở bất kỳ đâu trên cả nước.",
+//     icon: Truck,
+//     image: "/images/vf7.svg",
+//   },
+// ]
 
 export default function ServicesPage() {
   return (

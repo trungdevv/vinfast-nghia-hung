@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { Check, ChevronRight, Download, Share2 } from "lucide-react"
+import { Check, ChevronRight, Share2 } from "lucide-react"
 
 interface CarSpecs {
   performance: {
@@ -147,7 +147,7 @@ const carsData: Record<string, Car> = {
     price: 689000000,
     images: [
       "/images/vehicles/vf6-1.jpg",
-      "/images/vehicles/vf6-2.webp", 
+      "/images/vehicles/vf6-2.webp",
       "/images/vehicles/vf6-3.webp",
       "/images/vehicles/vf6-4.webp",
     ],
@@ -518,9 +518,9 @@ const carsData: Record<string, Car> = {
     ],
   },
 }
-
-export default function CarDetailPage({ params }: { params: { id: string } }) {
-  const car = carsData[params.id as keyof typeof carsData]
+export default async function CarDetailPage({params}: {params: Promise<{ id: string }>}) {
+  const { id } = await params;
+  const car = carsData[id as keyof typeof carsData]
 
   if (!car) {
     notFound()
@@ -665,7 +665,7 @@ export default function CarDetailPage({ params }: { params: { id: string } }) {
           <h2 className="text-3xl font-bold mb-8 text-center">Thông số kỹ thuật</h2>
 
           <Tabs defaultValue="performance" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 gap-4">
+            <TabsList className="grid w-full grid-cols-3 gap-4">
               <TabsTrigger className="bg-primary backdrop-blur-sm border-white hover:bg-primary/70 text-white" value="performance">Hiệu suất</TabsTrigger>
               <TabsTrigger className="bg-primary backdrop-blur-sm border-white hover:bg-primary/70 text-white" value="dimensions">Kích thước</TabsTrigger>
               <TabsTrigger className="bg-primary backdrop-blur-sm border-white hover:bg-primary/70 text-white" value="features">Tính năng</TabsTrigger>
