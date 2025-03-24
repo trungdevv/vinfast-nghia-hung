@@ -45,16 +45,16 @@ export default function HomePage() {
             <h2 className="text-2xl md:text-3xl font-bold">HỖ TRỢ MUA XE Ô TÔ VINFAST TRẢ GÓP 80%</h2>
             <p className="text-lg mt-1">LÃI SUẤT THẤP - THỦ TỤC NHANH CHÓNG</p>
           </div>
-          <Button size="lg" className="bg-white text-primary hover:bg-white/90" asChild>
-            <Link href="tel:0949429556">
+          {/* <Button size="lg" className="bg-white text-primary hover:bg-white/90" asChild> */}
+            <a href="tel:0949429556" className="bg-white text-primary hover:bg-white/90 px-4 py-2 rounded-lg">
               <span className="text-lg font-bold flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                 </svg>
                 0949 429 556
               </span>
-            </Link>
-          </Button>
+            </a>
+          {/* </Button> */}
         </div>
       </section>
       {/* Compare Section */}
@@ -112,39 +112,8 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Herio Green */}
-            <Card className="overflow-hidden group hover:border-primary/20 transition-colors">
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src="/images/vehicles/herio-green-250315-02.jpg"
-                  alt="Herio Green"
-                  fill
-                  className="object-cover transition-transform group-hover:scale-105 p-6"
-                />
-                <Badge className="absolute top-2 right-2 bg-primary text-white">Dịch Vụ</Badge>
-              </div>
-              <CardContent className="pt-6">
-                <h3 className="text-xl font-bold text-primary">Herio Green</h3>
-                <p className="text-foreground/70 font-bold">Dòng Xe Dịch Vụ</p>
-                <p className="font-bold text-lg mt-2 text-primary">Từ 499.000.000 VND</p>
-                <ul className="mt-4 space-y-1">
-                  <li className="text-sm flex items-center text-foreground/80 font-bold">Quãng đường lên tới: 358 km</li>
-                  <li className="text-sm flex items-center text-foreground/80 font-bold">Số chỗ ngồi: 5 chỗ</li>
-                  <li className="text-sm flex items-center text-foreground/80 font-bold">Phù hợp cho dịch vụ đưa đón cao cấp</li>
-                </ul>
-              </CardContent>
-              <CardFooter className="flex gap-2">
-                <Button variant="outline" className="flex-1 border-primary/10 hover:bg-primary/5" asChild>
-                  <Link href="/cars/herio-green">Chi Tiết</Link>
-                </Button>
-                <Button className="flex-1 bg-primary hover:bg-primary/90" asChild>
-                  <Link href="/contact?model=herio-green">Tư Vấn</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-            
-            {/* Minio Green */}
-            <Card className="overflow-hidden group hover:border-primary/20 transition-colors">
+             {/* Minio Green */}
+             <Card className="overflow-hidden group hover:border-primary/20 transition-colors">
               <div className="relative h-48 overflow-hidden">
                 <Image
                   src="/images/vehicles/minio.webp"
@@ -173,6 +142,39 @@ export default function HomePage() {
                 </Button>
               </CardFooter>
             </Card>
+
+            {/* Herio Green */}
+            <Card className="overflow-hidden group hover:border-primary/20 transition-colors">
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src="/images/vehicles/herio-green-250315-02.jpg"
+                  alt="Herio Green"
+                  fill
+                  className="object-cover transition-transform group-hover:scale-105 p-6"
+                />
+                <Badge className="absolute top-2 right-2 bg-primary text-white">Dịch Vụ</Badge>
+              </div>
+              <CardContent className="pt-6">
+                <h3 className="text-xl font-bold text-primary">Herio Green</h3>
+                <p className="text-foreground/70 font-bold">Dòng Xe Dịch Vụ</p>
+                <p className="font-bold text-lg mt-2 text-primary">Từ 499.000.000 VND</p>
+                <ul className="mt-4 space-y-1">
+                  <li className="text-sm flex items-center text-foreground/80 font-bold">Quãng đường lên tới: 326 km</li>
+                  <li className="text-sm flex items-center text-foreground/80 font-bold">Số chỗ ngồi: 5 chỗ</li>
+                  <li className="text-sm flex items-center text-foreground/80 font-bold">Phù hợp cho dịch vụ taxi, ride-sharing</li>
+                </ul>
+              </CardContent>
+              <CardFooter className="flex gap-2">
+                <Button variant="outline" className="flex-1 border-primary/10 hover:bg-primary/5" asChild>
+                  <Link href="/cars/herio-green">Chi Tiết</Link>
+                </Button>
+                <Button className="flex-1 bg-primary hover:bg-primary/90" asChild>
+                  <Link href="/contact?model=herio-green">Tư Vấn</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+            
+          
             
             {/* Nerio Green */}
             <Card className="overflow-hidden group hover:border-primary/20 transition-colors">
@@ -190,9 +192,10 @@ export default function HomePage() {
                 <p className="text-foreground/70 font-bold">Dòng Xe Dịch Vụ</p>
                 <p className="font-bold text-lg mt-2 text-primary">Từ 668.000.000 VND</p>
                 <ul className="mt-4 space-y-1">
-                  <li className="text-sm flex items-center text-foreground/80 font-bold">Quãng đường lên tới: 385 km</li>
-                  <li className="text-sm flex items-center text-foreground/80 font-bold">Số chỗ ngồi: 7 chỗ</li>
-                  <li className="text-sm flex items-center text-foreground/80 font-bold">Phù hợp cho dịch vụ đưa đón VIP</li>
+                  <li className="text-sm flex items-center text-foreground/80 font-bold">Quãng đường lên tới: 320 km</li>
+                  <li className="text-sm flex items-center text-foreground/80 font-bold">Số chỗ ngồi: 5 chỗ</li>
+                  <li className="text-sm flex items-center text-foreground/80 font-bold">Phù hợp cho dịch vụ đưa đón cao cấp</li>
+       
                 </ul>
               </CardContent>
               <CardFooter className="flex gap-2">
@@ -221,9 +224,10 @@ export default function HomePage() {
                 <p className="text-foreground/70 font-bold">Dòng Xe Dịch Vụ</p>
                 <p className="font-bold text-lg mt-2 text-primary">Từ 749.000.000 VND</p>
                 <ul className="mt-4 space-y-1">
-                  <li className="text-sm flex items-center text-foreground/80 font-bold">Quãng đường lên tới: 295 km</li>
-                  <li className="text-sm flex items-center text-foreground/80 font-bold">Số chỗ ngồi: 5 chỗ</li>
-                  <li className="text-sm flex items-center text-foreground/80 font-bold">Phù hợp cho dịch vụ taxi, ride-sharing</li>
+                  <li className="text-sm flex items-center text-foreground/80 font-bold">Quãng đường lên tới: 450 km</li>
+                  <li className="text-sm flex items-center text-foreground/80 font-bold">Số chỗ ngồi: 7 chỗ</li>
+                  <li className="text-sm flex items-center text-foreground/80 font-bold">Phù hợp cho dịch vụ đưa đón VIP</li>
+
                 </ul>
               </CardContent>
               <CardFooter className="flex gap-2">

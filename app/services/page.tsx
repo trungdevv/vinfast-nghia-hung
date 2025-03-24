@@ -78,16 +78,14 @@ export default function ServicesPage() {
             <h2 className="text-2xl md:text-3xl font-bold">HỖ TRỢ MUA XE Ô TÔ VINFAST TRẢ GÓP 80%</h2>
             <p className="text-lg mt-1">LÃI SUẤT THẤP - THỦ TỤC NHANH CHÓNG</p>
           </div>
-          <Button size="lg" className="bg-white text-primary hover:bg-white/90" asChild>
-            <Link href="tel:0949429556">
-              <span className="text-lg font-bold flex items-center">
+            <a href="tel:0949429556">
+              <span className="text-lg font-bold flex items-center bg-white text-primary hover:bg-white/90 px-4 py-2 rounded-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                 </svg>
                 0949 429 556
               </span>
-            </Link>
-          </Button>
+            </a>
         </div>
       </section>
       {/* Services Overview */}
